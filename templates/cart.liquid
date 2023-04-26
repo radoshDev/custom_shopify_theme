@@ -7,6 +7,7 @@
         <td>{{ item.product.title }}</td>
         <td>{{ item.quantity }}</td>
         <td>{{ item.final_price | money }}</td>
+        <td><input name="updates[]" value="{{item.quantity}}"></td>
         <td>{{ "Remove" | link_to: item.url_to_remove }}</td>
       </tr>
     {% endfor %}
