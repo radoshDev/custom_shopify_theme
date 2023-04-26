@@ -1,4 +1,6 @@
 {% if cart.empty? %}
+  <h3>Cart is empty</h3>
+{% else %}
   <h1>Cart</h1>
   {% form 'cart', cart %}
     <table>
@@ -17,6 +19,4 @@
     <button type="submit" name="update">Update</button>
     <button type="submit" name="checkout">Checkout</button>
   {% endform %}
-{% else %}
-  <h3>Cart is empty</h3>
 {% endif %}
