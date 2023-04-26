@@ -1,4 +1,4 @@
-<h1>{{ collection.title }}</h1>
+<h1>My collection: {{ collection.title }}</h1>
 
 {% for product in collection.products %}
   {% render 'product-item', product: product %}
