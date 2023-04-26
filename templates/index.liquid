@@ -3,7 +3,7 @@
 <ul>
   {% for product in home_colletion.products %}
     <li><a href="{{product.url}}">
-			<img src="{{product.featured_image | img_url: '50x'}}" height="50px"/>
+			<img src="{{product.featured_image | img_url: '100x'}}"/>
 			<h3>{{product.title}}</h3>
 			<div>{{product.price | money}}</div>
 			</a>
