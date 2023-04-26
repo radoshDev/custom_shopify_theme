@@ -1,1 +1,7 @@
 <h1>Cart</h1>
+
+<ol>
+  {% for item in cart.items %}
+    <li>{{ item.product.title }} - {{ item.quantity }} - {{ item.final_price }}</li>
+  {% endfor %}
+</ol>
