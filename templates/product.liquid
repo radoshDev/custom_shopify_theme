@@ -2,7 +2,7 @@
 <div>{{ product.price | money }}</div>
 <div>{{ product.description }}</div>
 
-{% form 'product', product: product %}
+{% form 'product', product %}
   <select name="id">
     {% for variant in product.variants %}
       <option value="{{variant.id}}">{{ variant.title }}</option>
