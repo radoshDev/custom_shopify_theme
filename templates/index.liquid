@@ -1,11 +1,12 @@
 {% assign home_colletion = collections["frontpage"] %}
 <h3>{{ home_colletion.title }}</h3>
-<ul>
-  {% for product in home_colletion.products %}
-    <li><a href="{{product.url}}">
-			<img src="{{product.featured_image | img_url: '100x'}}"/>
-			<h3>{{product.title}}</h3>
-			<div>{{product.price | money}}</div>
-			</a>
-  {% endfor %}
-</ul>
+
+{% for product in home_colletion.products %}
+  <div>
+    <a href="{{product.url}}">
+      <img src="{{product.featured_image | img_url: '100x'}}" />
+      <h3>{{ product.title }}</h3>
+      <div>{{ product.price | money }}</div>
+    </a>
+  </div>
+{% endfor %}
