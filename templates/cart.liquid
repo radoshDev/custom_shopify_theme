@@ -1,8 +1,10 @@
-<h1>Cart</h1>
-
-<ol>
-  {% for item in cart.items %}
-    <li>{{ item.product.title }} - {{ item.quantity }} - {{ item.final_price | money }}</li>
-  {% endfor %}
-</ol>
-<h4>Total: {{ cart.total_price | money }}</h4>
+{% form 'cart', cart %}
+  <h1>Cart</h1>
+  <ol>
+    {% for item in cart.items %}
+      <li>{{ item.product.title }} - {{ item.quantity }} - {{ item.final_price | money }}</li>
+    {% endfor %}
+  </ol>
+  <h3>Total: {{ cart.total_price | money }}</h3>
+  <button type="submit" name="checkout">Checkout</button>
+{% endform %}
