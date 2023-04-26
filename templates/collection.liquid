@@ -1,5 +1,8 @@
 <h1>My collection: {{ collection.title }}</h1>
+{% paginate collection.products by 5 %}
+  {% for product in collection.products %}
+    {% render 'product-item', product: product %}
+  {% endfor %}
 
-{% for product in collection.products %}
-  {% render 'product-item', product: product %}
-{% endfor %}
+  {{- paginate | default_pagination }}
+{% endpaginate %}
