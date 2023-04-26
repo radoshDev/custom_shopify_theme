@@ -1,19 +1,23 @@
-{% form 'cart', cart %}
-  <h1>Cart</h1>
-  <table>
+<h1>Cart</h1>
 
-    {% for item in cart.items %}
-      <tr>
-        <td>{{ item.product.title }}</td>
-        <td>{{ item.quantity }}</td>
-        <td>{{ item.final_price | money }}</td>
-        <td><input name="updates[]" value="{{item.quantity}}"></td>
-        <td>{{ "Remove" | link_to: item.url_to_remove }}</td>
-      </tr>
-    {% endfor %}
+{% if cart.empty %}
+  <h3>Cart is empty</h3>
+{% else %}
+  {% form 'cart', cart %}
+    <table>
+      {% for item in cart.items %}
+        <tr>
+          <td>{{ item.product.title }}</td>
+          <td>{{ item.quantity }}</td>
+          <td>{{ item.final_price | money }}</td>
+          <td><input name="updates[]" value="{{item.quantity}}"></td>
+          <td>{{ "Remove" | link_to: item.url_to_remove }}</td>
+        </tr>
+      {% endfor %}
 
-  </table>
-  <h3>Total: {{ cart.total_price | money }}</h3>
-  <button type="submit" name="update">Update</button>
-  <button type="submit" name="checkout">Checkout</button>
-{% endform %}
+    </table>
+    <h3>Total: {{ cart.total_price | money }}</h3>
+    <button type="submit" name="update">Update</button>
+    <button type="submit" name="checkout">Checkout</button>
+  {% endform %}
+{% endif %}
