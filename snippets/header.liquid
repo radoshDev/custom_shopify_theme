@@ -5,6 +5,9 @@
       {% for link in linklists.main-menu.links %}
         <li>{{ link.title | link_to: link.url }}</li>
       {% endfor %}
+      {% if cart.item_count > 0 %}
+        <li>{{ "cart (0)" | replace: '0', cart.item_count }}</li>
+      {% endif %}
     </ul>
   </nav>
 </header>
