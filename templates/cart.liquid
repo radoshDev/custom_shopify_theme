@@ -5,3 +5,6 @@
     <li>{{ item.product.title }} - {{ item.quantity }} - {{ item.final_price | money }}</li>
   {% endfor %}
 </ol>
+<div>
+  <strong>Total:</strong>
+  {{ cart.total_price | money }}</div>
