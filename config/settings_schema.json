@@ -1,10 +1,10 @@
 [
   {
-    "name": "custom_theme",
-    "theme_name": "My Custom Theme",
+    "name": "theme_info",
+    "theme_name": "Custom template theme",
     "theme_version": "1.0.0",
     "theme_author": "Shopify",
-    "theme_documentation_url": "https://github.com/radoshDev/custom_shopify_theme",
-    "theme_support_email": "radosh.dev@gmail.com"
+    "theme_documentation_url": "https://github.com/Shopify/themekit",
+    "theme_support_url": "https://github.com/Shopify/themekit/issues"
   }
 ]
