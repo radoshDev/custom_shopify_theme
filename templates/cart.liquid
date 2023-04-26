@@ -1,5 +1,5 @@
-<h1>Cart</h1>
-{% if cart.empty %}
+{% if cart.item_count > 0 %}
+  <h1>Cart</h1>
   {% form 'cart', cart %}
     <table>
       {% for item in cart.items %}
