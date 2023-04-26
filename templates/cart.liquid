@@ -2,6 +2,6 @@
 
 <ol>
   {% for item in cart.items %}
-    <li>{{ item.product.title }} - {{ item.quantity }} - {{ item.final_price }}</li>
+    <li>{{ item.product.title }} - {{ item.quantity }} - {{ item.final_price | money }}</li>
   {% endfor %}
 </ol>
