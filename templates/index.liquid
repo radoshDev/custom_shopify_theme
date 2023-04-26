@@ -1,5 +1,5 @@
 {% assign home_colletion = collections["frontpage"] %}
-<h3>{{ home_colletion.title }}</h3>
+<h3>My collection: {{ home_colletion.title }}</h3>
 
 {% for product in home_colletion.products %}
   {% render 'snippet', product: product %}
