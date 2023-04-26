@@ -1,3 +1,6 @@
 <h2>Products</h2>
 {% assign home_colletion = collections["frontpage"] %}
 <h3>{{ home_colletion.title }}</h3>
+{% for product in home_colletion.products %}
+  <div>{{ product }}</div>
+{% endfor %}
