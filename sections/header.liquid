@@ -1,3 +1,6 @@
+{{ 'header.css' | asset_url | stylesheet_tag }}
+
+
 <header class="header">
   <nav>
     <h1>{{ shop.name }} {{ localization.language.iso_code }}</h1>
@@ -26,11 +29,10 @@
     {% endif %}
   </nav>
 </header>
-<style>
-  .header {
-    background-color: {{ section.settings.bg}}
-  }
-</style>
+
+{% stylesheet %}
+  {{ "base.css" | asset_url | stylesheet_tag }}
+{% endstylesheet %}
 
 {% schema %}
   {
