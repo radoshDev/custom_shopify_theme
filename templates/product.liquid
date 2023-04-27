@@ -1,8 +1,13 @@
+{{ 'product.css' | asset_url | stylesheet_tag }}
+
 <section class="product_page">
   <div class="wrapper">
     <div class="product_page__gallery">
       {% for image in product.images %}
-        <img src="{{image | img_url: 'original'}}" alt="{{image.alt or product.title}}" />
+        <img
+          class="gallery__img"
+          src="{{image | img_url: 'original'}}"
+          alt="{{image.alt or product.title}}" />
       {% endfor %}
     </div>
     <div class="product_page__content">
