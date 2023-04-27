@@ -6,3 +6,11 @@
   display: flex;
   gap: 2rem;
 }
+
+.product_page__gallery {
+  flex: 1;
+}
+
+.product_page__content {
+  flex: 1;
+}
