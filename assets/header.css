@@ -1,4 +1,5 @@
-.header {
+.header a {
+  color: inherit;
 }
 
 .header__nav {
