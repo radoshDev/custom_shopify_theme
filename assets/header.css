@@ -1,5 +1,6 @@
 .header {
   background-color: #fff;
+  border-bottom: 2px solid lightgray;
 }
 .header a {
   color: inherit;
