@@ -16,7 +16,7 @@
       <div>{{ product.description }}</div>
 
       {% form 'product', product %}
-        <label>
+        <label class="product_form__label">
           Variant
           <select name="id" hidden="{{product.has_only_default_variant}}">
             {% for variant in product.variants %}
@@ -24,7 +24,7 @@
             {% endfor %}
           </select>
         </label>
-        <label>
+        <label class="product_form__label">
           Quantity
           <input
             type="number"
