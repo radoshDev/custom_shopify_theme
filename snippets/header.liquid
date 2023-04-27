@@ -6,7 +6,7 @@
         <li>{{ link.title | link_to: link.url }}</li>
       {% endfor %}
       {% if cart.item_count > 0 %}
-        <li>{{ "cart (0)" | replace: '0', cart.items.size | link_to: "/cart" }}</li>
+        <li>{{ "general.cart" | t }}{{ "(0)" | replace: '0', cart.items.size | link_to: "/cart" }}</li>
       {% endif %}
     </ul>
     {% if settings.show_search %}
