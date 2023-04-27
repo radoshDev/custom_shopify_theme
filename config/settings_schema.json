@@ -15,6 +15,12 @@
         "id": "bg",
         "label": "Background color",
         "default": "#fff"
+      },
+      {
+        "type": "color",
+        "id": "text_color",
+        "label": "Text color",
+        "default": "#000"
       }
     ]
   }
