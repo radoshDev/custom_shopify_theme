@@ -12,7 +12,7 @@
     {% if settings.show_search %}
       <form action="/search">
         <input type="search" name="q">
-        <button type="submit">Search</button>
+        <button type="submit">{{ "general.search" | t }}</button>
       </form>
     {% endif %}
   </nav>
