@@ -6,8 +6,15 @@
         <li>{{ link.title | link_to: link.url }}</li>
       {% endfor %}
       {% if cart.item_count > 0 %}
+        {% capture cart_url %}
+          {% if shop.locale %}
+            /{{ shop.locale }}/cart
+          {% else %}
+            /cart
+          {% endif %}
+        {% endcapture %}
         <li>
-          <a href="{{ url_for('cart') }}">{{ "general.cart" | t | append: '(' | append: cart.items.size | append: ')' }}</a>
+          <a href="{{ cart_url }}">{{ "general.cart" | t | append: '(' | append: cart.items.size | append: ')' }}</a>
         </li>
       {% endif %}
     </ul>
