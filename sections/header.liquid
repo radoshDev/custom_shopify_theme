@@ -8,7 +8,7 @@
     </h2>
     <ul class="header__menu">
       {% for link in linklists.main-menu.links %}
-        <li>{{ link.title | link_to: link.url }}</li>
+        <li class="header__menu-item">{{ link.title | link_to: link.url }}</li>
       {% endfor %}
       {% if cart.item_count > 0 %}
         {% capture cart_url %}
@@ -18,7 +18,7 @@
             /cart
           {% endif %}
         {% endcapture %}
-        <li>
+        <li class="header__menu-item">
           <a href="{{ cart_url }}">{{ "general.cart" | t | append: '(' | append: cart.items.size | append: ')' }}</a>
         </li>
       {% endif %}
