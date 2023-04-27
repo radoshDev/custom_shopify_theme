@@ -7,11 +7,11 @@
       {% endfor %}
       {% if cart.item_count > 0 %}
         {% capture cart_url %}
-          {% unless shop.locale == "en" %}
-            /{{ shop.locale }}/cart
+          {% if localization.language.iso_code != "en" %}
+            /{{ localization.language.iso_code }}/cart
           {% else %}
             /cart
-          {% endunless %}
+          {% endif %}
         {% endcapture %}
         <li>
           <a href="{{ cart_url }}">{{ "general.cart" | t | append: '(' | append: cart.items.size | append: ')' }}</a>
