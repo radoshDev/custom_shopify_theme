@@ -18,7 +18,7 @@
         </li>
       {% endif %}
     </ul>
-    {% if settings.show_search %}
+    {% if section.settings.show_search %}
       <form action="/search">
         <input type="search" name="q">
         <button type="submit">{{ "general.search" | t }}</button>
@@ -26,6 +26,12 @@
     {% endif %}
   </nav>
 </header>
+
+{% stylesheet %}
+  .header {
+    background-color: {{section.settings.bg}}
+  }
+{% endstylesheet %}
 
 {% schema %}
   {
@@ -38,7 +44,7 @@
         "default": true
       }, {
         "type": "color",
-        "id": "bg_color",
+        "id": "bg",
         "label": "Background Color",
         "default": "#fff"
       }
