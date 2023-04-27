@@ -2,7 +2,7 @@
   <div class="wrapper">
     <div class="product_page__gallery">
       {% for image in product.images %}
-        <img src="{{image | img_url}}" alt="{{image.alt or product.title}}" />
+        <img src="{{image | img_url: 'original'}}" alt="{{image.alt or product.title}}" />
       {% endfor %}
     </div>
     <div class="product_page__content">
