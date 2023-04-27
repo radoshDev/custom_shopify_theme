@@ -9,9 +9,11 @@
         <li>{{ "cart (0)" | replace: '0', cart.items.size | link_to: "/cart" }}</li>
       {% endif %}
     </ul>
-    <form action="/search">
-      <input type="search" name="q">
-      <button type="submit">Search</button>
-    </form>
+    {% if settings.show_search %}
+      <form action="/search">
+        <input type="search" name="q">
+        <button type="submit">Search</button>
+      </form>
+    {% endif %}
   </nav>
 </header>
