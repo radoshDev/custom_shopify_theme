@@ -18,6 +18,23 @@
       },
       {
         "type": "color",
+        "id": "tx_color",
+        "label": "Text color",
+        "default": "#000"
+      }
+    ]
+  },
+  {
+    "name": "Settings",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "show_search",
+        "label": "Show search form?",
+        "default": true
+      },
+      {
+        "type": "color",
         "id": "text_color",
         "label": "Text color",
         "default": "#000"
