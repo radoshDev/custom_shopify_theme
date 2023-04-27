@@ -3,6 +3,7 @@
 
 .header__nav {
   display: flex;
+  align-items: center;
   padding: 1rem 0;
 }
 .header__title {
