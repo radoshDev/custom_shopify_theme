@@ -1,7 +1,8 @@
 {
   "sections": {
     "main": {
-      "type": "not-found"
+      "type": "not-found",
+      "settings": {}
     }
   },
   "order": ["main"]
