@@ -11,6 +11,10 @@
   flex: 1 1 100%;
 }
 
+.product_page__gallery .gallery__img {
+  max-width: 100%;
+}
+
 .product_page__content {
   flex: 1 1 100%;
 }
