@@ -8,9 +8,9 @@
 }
 
 .product_page__gallery {
-  flex: 1 1 auto;
+  flex: 1 1 100%;
 }
 
 .product_page__content {
-  flex: 1 1 auto;
+  flex: 1 1 100%;
 }
