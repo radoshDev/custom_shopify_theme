@@ -12,3 +12,8 @@
   text-transform: uppercase;
   color: cadetblue;
 }
+
+.header__menu {
+  display: flex;
+  list-style: none;
+}
