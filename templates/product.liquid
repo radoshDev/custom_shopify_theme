@@ -1,8 +1,11 @@
 <section class="product_page">
   <div class="wrapper">
-    <div class="product_page__gallery"></div>
+    <div class="product_page__gallery">
+      {% for image in product.images %}
+        <img src="{{image.src}}" alt="{{image.alt or product.title}}" />
+      {% endfor %}
+    </div>
     <div class="product_page__content">
-
       <h1>{{ product.title }}</h1>
       <div>{{ product.price | money }}</div>
       <div>{{ product.description }}</div>
