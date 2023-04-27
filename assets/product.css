@@ -8,7 +8,7 @@
 }
 
 .product_page__gallery {
-  flex: 1 1 100%;
+  flex: 1;
 }
 
 .product_page__gallery .gallery__img {
@@ -16,5 +16,5 @@
 }
 
 .product_page__content {
-  flex: 1 1 100%;
+  flex: 1;
 }
