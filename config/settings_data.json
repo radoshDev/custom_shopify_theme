@@ -2,6 +2,15 @@
   "current": {
     "bg": "#add8e6",
     "tx_color": "#4d4444",
+    "sections": {
+      "header": {
+        "type": "header",
+        "settings": {
+          "show_search": true,
+          "bg": "#f9dede"
+        }
+      }
+    },
     "content_for_index": [
 
     ]
