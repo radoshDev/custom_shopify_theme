@@ -1,6 +1,12 @@
 {
-  "current": "Default",
+  "current": {
+    "bg": "#d3ffca",
+    "content_for_index": [
+
+    ]
+  },
   "presets": {
-    "Default": { }
+    "Default": {
+    }
   }
 }
