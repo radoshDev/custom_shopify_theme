@@ -1,7 +1,7 @@
 {% paginate collection.products by 5 %}
 	<h1>My collection: {{ collection.title }}</h1>
 
-	<select id="sort-by">
+	<select id="sort_by">
 		{% assign sort_by = collection.sort_by | default: collection.default_sort_by  %}
 
 		{% for option in collection.sort_options %}
@@ -17,3 +17,22 @@
 
   {{- paginate | default_pagination }}
 {% endpaginate %}
+
+<script>
+	Shopify.queryParams = {}
+	if (location.search.length) {
+		let params = location.search.substr(1).split("&")
+		for(let i = 0; i < params.length; i++) {
+			let keyValue = params[i].split('=')
+			if (keyValue.length) {
+				Shopify.queryParams[decodeURIComponent(keyValue[0])] = decodeURIComponent(keyValue[1])
+			}
+		}
+	}
+
+	document.getElementById("sort_by").addEventListener("change", function(e) {
+		const value = e.target.value
+		Shopify.queryParams.sort_by = value
+		location.search = new URLSearchParams(Shopify.queryParams).toString()
+	})
+</script>
