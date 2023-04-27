@@ -16,11 +16,13 @@
       <div>{{ product.description }}</div>
 
       {% form 'product', product %}
-        <select name="id">
-          {% for variant in product.variants %}
-            <option value="{{variant.id}}">{{ variant.title }}</option>
-          {% endfor %}
-        </select>
+        {% unless product.has_only_default_variant %}
+          <select name="id">
+            {% for variant in product.variants %}
+              <option value="{{variant.id}}">{{ variant.title }}</option>
+            {% endfor %}
+          </select>
+        {% endunless %}
         <button type="submit">Add to Cart</button>
       {% endform %}
     </div>
