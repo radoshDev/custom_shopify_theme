@@ -3,7 +3,13 @@
   {% if search.performed %}
     <h1>Here's your result</h1>
     {% for result in search.results %}
-      <div>{{ result.object_type }}</div>
+      {% if result.object_type == "article" %}
+        <div>{{ result.title | link_to: result.url }}</div>
+      {% elsif object_type == "page" %}
+        <div>{{ result.title | link_to: result.url }}</div>
+      {% else %}
+        <div>{{ result.title | link_to: result.url }}</div>
+      {% endif %}
     {% endfor %}
   {% else %}
     <h1>Try search something</h1>
