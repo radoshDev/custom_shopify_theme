@@ -1,6 +1,6 @@
 <header>
   <nav>
-    <h1>{{ shop.name }} {{ shop.locale }}</h1>
+    <h1>{{ shop.name }} {{ localization.language }}</h1>
     <ul>
       {% for link in linklists.main-menu.links %}
         <li>{{ link.title | link_to: link.url }}</li>
