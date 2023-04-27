@@ -24,12 +24,16 @@
 
 .header__menu-item {
   margin-right: 2.2rem;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: bold;
 }
 
 .header__menu-item a {
   transition: color 0.3s ease;
+}
+
+.header__menu-item a {
+  color: dimgray;
 }
 
 .header__menu-item a:hover {
