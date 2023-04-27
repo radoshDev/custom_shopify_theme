@@ -1,7 +1,7 @@
 {{ 'product.css' | asset_url | stylesheet_tag }}
 
 <section class="product_page">
-  <div class="wrapper">
+  <div class="wrapper product_page__inner">
     <div class="product_page__gallery">
       {% for image in product.images %}
         <img
