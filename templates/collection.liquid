@@ -20,7 +20,7 @@
 
 <script>
 	Shopify.queryParams = {}
-	console.log(location.search)
+	console.log("Search location:", location.search)
 	if (location.search.length) {
 		let params = location.search.substr(1).split("&")
 		for(let i = 0; i < params.length; i++) {
