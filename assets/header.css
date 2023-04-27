@@ -5,3 +5,10 @@
   display: flex;
   padding: 1rem 0;
 }
+.header__title {
+  color: dimgray;
+}
+.header__title-local {
+  text-transform: uppercase;
+  color: cadetblue;
+}
