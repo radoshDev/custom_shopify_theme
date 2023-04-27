@@ -7,7 +7,7 @@
       {% endfor %}
       {% if cart.item_count > 0 %}
         <li>
-          <a href="/cart">{{ "general.cart" | t }}{{ "(0)" | replace: '0', cart.items.size }}</a>
+          <a href="{{url_for('cart')}}">{{ "general.cart" | t }}{{ "(0)" | replace: '0', cart.items.size }}</a>
         </li>
       {% endif %}
     </ul>
