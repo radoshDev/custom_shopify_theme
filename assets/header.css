@@ -1,4 +1,7 @@
 .header {
-  background-color: green;
-  color: red;
+}
+
+.header__nav {
+  display: flex;
+  padding: 1rem 0;
 }
