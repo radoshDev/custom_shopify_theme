@@ -8,5 +8,5 @@
   {% else %}
     <h1>Try search something</h1>
   {% endif %}
-
+  {{- paginate | default_pagination }}
 {% endpaginate %}
