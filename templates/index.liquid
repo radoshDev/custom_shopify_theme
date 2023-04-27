@@ -2,5 +2,5 @@
 <h3>{{ home_colletion.title }}</h3>
 
 {% for product in home_colletion.products %}
-  {% render 'snippet', product: product %}
+  {% render 'product-item', product: product %}
 {% endfor %}
