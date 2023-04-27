@@ -16,7 +16,7 @@
       <div>{{ product.description }}</div>
 
       {% form 'product', product %}
-        <label class="product_form__label">
+        <label class="product_form__label {% if product.has_only_default_variant %} hidden {% endif %}">
           Variant
           <select name="id" hidden="{{product.has_only_default_variant}}">
             {% for variant in product.variants %}
