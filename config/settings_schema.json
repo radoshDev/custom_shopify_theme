@@ -32,12 +32,6 @@
         "id": "show_search",
         "label": "Show search form?",
         "default": true
-      },
-      {
-        "type": "color",
-        "id": "text_color",
-        "label": "Text color",
-        "default": "#000"
       }
     ]
   }
