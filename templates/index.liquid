@@ -1,1 +1,6 @@
-<h1>Hello There!</h1>
+{% assign home_colletion = collections["frontpage"] %}
+<h3>{{ home_colletion.title }}</h3>
+
+{% for product in home_colletion.products %}
+  {% render 'product-item', product: product %}
+{% endfor %}

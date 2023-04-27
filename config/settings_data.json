@@ -1,6 +1,10 @@
 {
-  "current": "Default",
+  "current": {
+    "bg": "#add8e6",
+    "tx_color": "#4d4444",
+    "content_for_index": []
+  },
   "presets": {
-    "Default": { }
+    "Default": {}
   }
 }

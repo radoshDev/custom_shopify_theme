@@ -1,0 +1,52 @@
+<header class="header">
+  <nav>
+    <h1>{{ shop.name }} {{ localization.language.iso_code }}</h1>
+    <ul>
+      {% for link in linklists.main-menu.links %}
+        <li>{{ link.title | link_to: link.url }}</li>
+      {% endfor %}
+      {% if cart.item_count > 0 %}
+        {% capture cart_url %}
+          {% if localization.language.iso_code != "en" %}
+            /{{ localization.language.iso_code }}/cart
+          {% else %}
+            /cart
+          {% endif %}
+        {% endcapture %}
+        <li>
+          <a href="{{ cart_url }}">{{ "general.cart" | t | append: '(' | append: cart.items.size | append: ')' }}</a>
+        </li>
+      {% endif %}
+    </ul>
+    {% if section.settings.show_search %}
+      <form action="/search">
+        <input type="search" name="q">
+        <button type="submit">{{ "general.search" | t }}</button>
+      </form>
+    {% endif %}
+  </nav>
+</header>
+<style>
+  .header {
+    background-color: {{ section.settings.bg}}
+  }
+</style>
+
+{% schema %}
+  {
+    "name": "Header",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "show_search",
+        "label": "Show search form?",
+        "default": true
+      }, {
+        "type": "color",
+        "id": "bg",
+        "label": "Background Color",
+        "default": "#fff"
+      }
+    ]
+  }
+{% endschema %}

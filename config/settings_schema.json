@@ -3,8 +3,37 @@
     "name": "theme_info",
     "theme_name": "Custom template theme",
     "theme_version": "1.0.0",
-    "theme_author": "Shopify",
-    "theme_documentation_url": "https://github.com/Shopify/themekit",
-    "theme_support_url": "https://github.com/Shopify/themekit/issues"
+    "theme_author": "radosh",
+    "theme_documentation_url": "https://github.com/radoshDev/custom_shopify_theme",
+    "theme_support_email": "radosh.dev@gmail.com"
+  },
+  {
+    "name": "Colors",
+    "settings": [
+      {
+        "type": "color",
+        "id": "bg",
+        "label": "Background color",
+        "default": "#fff"
+      },
+      {
+        "type": "color",
+        "id": "tx_color",
+        "label": "Text color",
+        "default": "#000"
+      }
+    ]
+  },
+
+  {
+    "name": "Settings",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "show_search",
+        "label": "Show search form?",
+        "default": true
+      }
+    ]
   }
 ]
