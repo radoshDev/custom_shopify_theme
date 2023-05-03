@@ -1,9 +1,14 @@
+{{ 'header.css' | asset_url | stylesheet_tag }}
+
+
 <header class="header">
-  <nav>
-    <h1>{{ shop.name }} {{ localization.language.iso_code }}</h1>
-    <ul>
+  <nav class="wrapper header__nav">
+    <h2 class="header__title">{{ shop.name }}
+      <span class="header__title-local">{{ localization.language.iso_code }}</span>
+    </h2>
+    <ul class="header__menu">
       {% for link in linklists.main-menu.links %}
-        <li>{{ link.title | link_to: link.url }}</li>
+        <li class="header__menu-item">{{ link.title | link_to: link.url }}</li>
       {% endfor %}
       {% if cart.item_count > 0 %}
         {% capture cart_url %}
@@ -13,7 +18,7 @@
             /cart
           {% endif %}
         {% endcapture %}
-        <li>
+        <li class="header__menu-item">
           <a href="{{ cart_url }}">{{ "general.cart" | t | append: '(' | append: cart.items.size | append: ')' }}</a>
         </li>
       {% endif %}
@@ -26,11 +31,10 @@
     {% endif %}
   </nav>
 </header>
-<style>
-  .header {
-    background-color: {{ section.settings.bg}}
-  }
-</style>
+
+{% stylesheet %}
+  {{ "base.css" | asset_url | stylesheet_tag }}
+{% endstylesheet %}
 
 {% schema %}
   {

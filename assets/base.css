@@ -1,0 +1,12 @@
+body {
+  background-color: aliceblue;
+  font-family: "Roboto", sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+.wrapper {
+  max-width: 1400px;
+  padding: 0 1rem;
+  margin: 0 auto;
+}

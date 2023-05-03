@@ -1,0 +1,33 @@
+.product_page {
+  padding: 2rem 0;
+}
+
+.product_page__inner {
+  display: flex;
+  gap: 4rem;
+}
+
+.product_page__gallery {
+  flex: 3;
+}
+
+.product_page__gallery .gallery__img {
+  max-width: 100%;
+}
+
+.product_page__content {
+  flex: 2;
+}
+
+.product_form__label {
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+  margin-bottom: 1.2rem;
+}
+
+.product_form__label.hidden {
+  display: none;
+}
